@@ -3,8 +3,9 @@ import math
 
 
 class Employee:
-    def __init__(self, name, zp_day, days):
+    def __init__(self, name, email, zp_day, days):
         self.name = name
+        self.email = email
         self.zp_day = zp_day
         self.days = days
 
@@ -61,9 +62,9 @@ class Recruiter(Employee):
 
 class Programmer(Employee):
 
-    def __init__(self, name, zp_day, days, tech_stack):
+    def __init__(self, name, email, zp_day, days, tech_stack):
         """added skills"""
-        super().__init__(name, zp_day, days)
+        super().__init__(name, email, zp_day, days)
         self.tech_stack = tech_stack
 
     def work(self):
