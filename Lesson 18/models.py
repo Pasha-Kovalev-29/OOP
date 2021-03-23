@@ -109,9 +109,10 @@ class Programmer(Employee):
         """combining two programmers """
         tech_stack = self.tech_stack | other.tech_stack
         name = self.name + other.name
+        email = self.name + other.name + '@gmail.com'
         zp_day = self.zp_day + other.zp_day
         day = math.ceil((self.days + other.days) / 2)
-        return Programmer(name, zp_day, day, tech_stack)
+        return Programmer(name, email, zp_day, day, tech_stack)
 
 
 class Candidate():
