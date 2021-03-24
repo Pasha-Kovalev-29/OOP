@@ -22,8 +22,7 @@ def main():
     except Exception as e:
         with open('logs.py', 'a+') as fh:
             fh.write(str(datetime.datetime.today()) + ' ')
-        logging.error(type(e)), logging.error(e)
-
+        logging.exception(e)
 
 
 if __name__ == '__main__':
