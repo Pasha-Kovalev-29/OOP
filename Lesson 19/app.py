@@ -1,6 +1,7 @@
 import models as mod
 import logging
 import datetime
+import requests
 
 logging.basicConfig(filename="logs.py", datefmt=datetime.datetime.today(), level=logging.INFO)
 
@@ -23,7 +24,7 @@ def main():
     alfa = alex + alesha
     print(alfa)
     print(alex.full_info)
-    mod.Candidate.create_candidates("candidates.csv")
+    mod.Candidate.create_candidates(file="candidates.csv")
 
     # except Exception as e:
     #     with open('logs.py', 'a+') as fh:
